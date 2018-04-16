@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "HookTube-ify",
+  "version": "1.0",
+  "description": "Changes YouTube.com links to HookTube.com links",
+  "icons": {
+    "48": "icons/48x48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
