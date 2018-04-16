@@ -1,8 +1,8 @@
-let url = window.location.href;
+let url = new URL(window.location.href);
 let old_domain = 'youtube.com';
 let new_domain = 'hooktube.com';
 
-if(url.indexOf(old_domain) >= 0) {
-  let new_url = url.replace(old_domain, new_domain)
+if(url.hostname.indexOf(old_domain)) {
+  let new_url = url.href.replace(old_domain, new_domain);
   window.location.href = new_url;
 }
